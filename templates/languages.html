@@ -1,0 +1,22 @@
+{% extends './base.html' %}
+
+{% block title %}
+Idiomas
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h1>Languages</h1>
+        <p>Da una lista de lenguas soportadas por la api. Principalmente metadatos. No tiene mucho uso por si solo.</p>
+        <h2><strong>Parámetros</strong><h2>
+        <h3>Obligatorios:</h3>
+        <p>Ninguno salvo la api key!</p>
+        <p>Sin parametros, escupe la lista entera de idiomas.</p>
+        <h3>Opcionales:</h3>
+        <ul class="indent">
+            <li><strong>Language:</strong> Devolver lengua correspondiente con el código introducido.
+            <li><strong>Search:</strong> Filtrar por nombre o código de pais.
+        </ul>
+    </article>
+{% endblock %}
+

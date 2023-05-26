@@ -1,0 +1,33 @@
+{% extends './base.html' %}
+
+{% block title %}
+Paises
+{% endblock %}
+
+{% block content %}
+<article>
+    <h1>Lista de paises</h1>
+    <h2>Resultados para: " {{ busqueda }} "</h2>
+    <table>
+    <thead>
+        <tr>
+        <th></th>
+        <th>COD</th>
+        <th>Nombre</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for i in listapaises %}
+        {% if busqueda | lower in i.name | lower %}
+            <tr>
+                <td><img class="cellimg" src={{ i.flag }}></img></td>
+                <td class="center">{{ i.code }}</td>
+                <td class="center">{{ i.name }}</td>
+            </tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+    </table>
+</article>
+{% endblock %}
+    

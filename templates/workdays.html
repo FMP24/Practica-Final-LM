@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+
+{% block title %}
+Dias laborales
+{% endblock %}
+
+{% block content %}
+<article>
+    <h2 class="center"><strong>Dias laborales para que acabe el año</strong></h2>
+    <h1 class="box">{{ diasrestantes.workdays }}</h1>
+</article>
+
+<article>
+    <h1>Workdays</h1>
+    <p>Devuelve una lista con un solo valor: el numero de dias laborales desde fecha A a fecha B.</p>
+    <h2><strong>Parámetros</strong><h2>
+    <h3>Obligatorios:</h3>
+    <ul class="indent">
+        <li><strong>Country:</strong> Filtrar por pais.
+        <li><strong>Start:</strong> Fecha de inicio
+        <li><strong>End:</strong> Fecha de finalización
+    </ul>
+    <p>Todas las fechas especificadas en los parámetros tienen el formato <strong>'YYYY-MM-DD'</strong></p>
+{% endblock %}
+

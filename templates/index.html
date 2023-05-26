@@ -1,0 +1,48 @@
+{% extends './base.html' %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+<article>
+    <h2 class="center"><strong>Dias para que acabe el curso</strong></h2>
+    <h1 class="box">{{ diasrestantes.workdays }}</h1>
+</article>
+
+<article>
+    <h1>Recursos:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Recurso</th>
+                <th>Información</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Holidays</td>
+                <td>Dias de vacaciones por pais</td>
+                <td><a href="/holidays">Detalles...</a></td>
+            </tr>
+            <tr>
+                <td>Countries</td>
+                <td>Paises y regiones</td>
+                <td><a href="/countries">Detalles...</a></td>
+            </tr>
+            <tr>
+                <td>Languages</td>
+                <td>Traducción</td>
+                <td><a href="/languages">Detalles...</a></td>
+            </tr>
+            <tr>
+                <td>Workdays</td>
+                <td>Numero de dias laborales</td>
+                <td><a href="/workdays">Detalles...</a></td>
+            </tr>
+        </tbody>
+    </table>
+</article>
+{% endblock %}
+

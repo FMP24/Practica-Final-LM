@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+{% block title %}
+Paises
+{% endblock %}
+
+{% block content %}
+    <article>
+        <h1 class="center">Buscar Pais</h1><br>
+        <form class="center" method="POST" action="/countries">
+            <label for="pais">&nbsp;</label>
+            <input type="text" name="pais">
+            <button type="submit">Buscar</button>
+        </form>
+    </article>
+    <article>
+        <h1>Countries</h1>
+        <p>Da una lista de los paises en la base de datos para uso en conjunto con las otras listas. Contiene información sobre los paises, así como subdivisiones (Comunidades Autónomas, Estados...)</p>
+        <h2><strong>Parámetros</strong><h2>
+        <h3>Obligatorios:</h3>
+        <p>Ninguno salvo la api key!</p>
+        <p>Sin parametros, escupe la lista entera de paises.</p>
+        <h3>Opcionales:</h3>
+        <ul class="indent">
+            <li><strong>Country:</strong> Filtrar por nombre de pais.
+            <li><strong>Search:</strong> Filtrar por código de pais.
+            <li><strong>Public:</strong> Solo paises con vacaiones públicas puestas por el gobierno.
+        </ul>
+    </article>
+{% endblock %}
+

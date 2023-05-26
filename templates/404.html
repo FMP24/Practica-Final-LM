@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+
+{% block head %}
+<meta http-equiv="refresh" content="5;url={{ url_for('index') }}">
+{% endblock %}
+
+{% block title %}
+Página no encontrada
+{% endblock %}
+
+{% block article %}
+<h1>Error 404</h1>
+<p>Ups, página no encontrada</p>
+<p><strong>Redireccionando a la página principal...</strong></p><br>
+<p>Haga clic <a href="/">aqui</a> si no pasa nada</p>
+{% endblock %}

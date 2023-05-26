@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	{% block head %}{% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+	<link rel="icon" type="image/x-icon" href="/static/img/calendar.svg">
+    <meta name="description" content={% block description%}{% endblock %}>
+    <link rel="stylesheet" href={{ url_for('static', filename='css/style.css') }}>
+</head>
+
+<body>
+	<div class="container">
+	<header>
+		<div><p id="navp"><a href="/"><img src="/static/img/calendar.svg" alt="logo"><a>Uso de HolidayApi</p></div>
+		<nav>
+			<ul>
+				<li><a id="menu" href="/holidays">Holidays</a>
+				<li><a id="menu" href="/countries">Countries</a>
+				<li><a id="menu" href="/languages">Languages</a>
+				<li><a id="menu" href="/workdays">Workdays</a>
+			</ul>
+		</nav>
+	</header>
+	{% block body %}
+    {% endblock %}
+	<section id="pageContent">
+		<main role="main">
+			{% block content %}
+            {% endblock %}
+		</main>
+		<aside>
+			<div><p><a href="#"><img src="" alt="Anuncios supongo"></img></a></p></div>
+		</aside>
+	</section>
+	<footer>
+		<p>¡¡Página de prueba!! - <a href="https://html5-templates.com/preview/html5-page-layout.html">Template original</a> </p>
+	</footer>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+
+{% block title %}
+Vacaciones
+{% endblock %}
+
+{% block content %}
+<article>
+    <h2 class=center><strong>Siguiente fiesta nacional:</strong></h2>
+    <h1 class=box>
+        {% for i in fiestas.holidays %}
+            {{ i.name }}
+        {% endfor %}
+    </h1>
+</article>
+
+<article>
+    <h1>Holidays</h1>
+    <p>Da una lista de festividades publicas para los diferentes paises, estados o provincias. Esta es la lista troncal de la API.</p>
+    <h2><strong>Parámetros</strong><h2>
+    <h3>Obligatorios:</h3>
+    <ul class="indent">
+        <li><strong>Country:</strong> Pais de origen
+        <li><strong>Year:</strong> Año
+    </ul>
+    <h3>Opcionales:</h3>
+    <ul class="indent">
+        <li><strong>Month:</strong> Mes
+        <li><strong>Day:</strong> Día
+        <li><strong>Public:</strong> Solo vacaiones públicas puestas por el gobierno del pais.
+        <li><strong>Subdivisions:</strong> Especificar subdivisiones de segundo o tercer orden.
+        <li><strong>Search:</strong> Busqueda por nombre
+        <li><strong>Language:</strong> Idioma
+        <li><strong>Previous:</strong> En vez del siguiente, devuelve el último día de vacaciones.
+    </ul>
+</article>
+{% endblock %}
+
