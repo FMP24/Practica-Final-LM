@@ -4,8 +4,6 @@ app = Flask(__name__)
 import requests
 from datetime import datetime, timedelta
 
-apikey="177e1059-674a-463d-89b2-634bdae94782"
-
 #holidays= requests.get("https://holidayapi.com/v1/holidays", params={}, timeout=2.50)
 #countries= requests.get("https://holidayapi.com/v1/countries", params={}, timeout=2.50)
 #languages= requests.get("https://holidayapi.com/v1/languages", params={}, timeout=2.50)
